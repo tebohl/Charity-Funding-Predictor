@@ -8,12 +8,12 @@ A nonprofit foundation Alphabet Soup wants a tool that can help it select the ap
 ### Step 1: Preprocess the Data  
 Using Pandas and Scikit-learn, the data in charity_data.csv was read and prepared by dropping unecessary columns, unique values binned together and categorical variables were encoded. 
 
-Target variables: 'IS_SUCCESSFUL'
+Target variable: 'IS_SUCCESSFUL'
 
 Feature variables: 'APPLICATION_TYPE', 'AFFILIATION', 'CLASSIFICATION', 'USE_CASE', 'ORGANIZATION', 'STATUS', 'INCOME_AMT', 'SPECIAL_CONSIDERATIONS'
 
 ### Step 2: Compile, Train, and Evaluate the Model  
-Using TensorFlow and Keras, I designed a neural network to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. First assigning the number of input features and nodes for each layer, then creating the first hidden layer with an appropriate activation function and finally and output layer with an appropriate activation function. Then the model is compiled and trained and a callback that saves the model's weights every five epochs is created. Lastly, I evaluated the model using the test data to determine the loss and accuracy.  
+Using TensorFlow and Keras, I designed a neural network to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. First assigning the number of input features and nodes for each layer, then creating the first hidden layer with an appropriate activation function and finally and output layer with an appropriate activation function. Then the model is compiled and trained. Lastly, I evaluated the model using the test data to determine the loss and accuracy.  
 The results are saved to an HDF5 file in the Resources folder called AlphabetSoupCharity.h5.
 
 
@@ -21,14 +21,14 @@ The results are saved to an HDF5 file in the Resources folder called AlphabetSou
 With TensorFlow, I attempted to optimize the model to achieve a target predictive accuracy higher than 75% using the following methods:
 
 Data Adjustments:  
-Dropped additoinal column 'ASK_AMT'.  (This did not help the accuracy, so I replaced it in my second attempt)
-Created more bins for rare occurrences in column 'CLASSIFICATION'. (I tried several bin quantities, but yielded a similar accuracy for each)
-Added one hidden layer. (I also tried different quantities of nodes, but the accuracy remained close to 72%)
-Added 50 epochs to the training regimen.  
+- Dropped additoinal column 'ASK_AMT'.  (This did not help the accuracy, so I replaced it in my second attempt)
+- Created more bins for rare occurrences in column 'CLASSIFICATION'. (I tried several bin quantities, but yielded a similar accuracy for each)
+- Added one hidden layer. (I also tried different quantities of nodes, but the accuracy remained close to 72%)
+- Added 50 epochs to the training regimen.  
 
 
 ### Step 4: Summary  
-After reading the data in charity_data.csv, unecessary columns were dropped, unique values binned together and categorical variables were encoded. The target variable was 'IS_SUCCESSFUL'. I then complied, trained and evaluated the model. Starting with two hidden layers, the first of which had twice as many nodes as features, the second with 15 nodes, I used relu and sigmoid activation functions and 100 epochs to train the model. The accuracy was ~72.7%. I made several attempts to optimize the model (details are above), but the accuracy hovered around the same value. Both models are saved in HDF5 files as well.
+After reading the data, unecessary columns were dropped, unique values binned together and categorical variables were encoded. The target variable was 'IS_SUCCESSFUL'. The model was complied, trained and evaluated starting with two hidden layers, the first of which had twice as many nodes as features, the second with 15 nodes. Relu and sigmoid activation functions with 100 epochs were used to train the model. The accuracy was ~72.7%. Following the initial trial, I made several attempts to optimize the model (details are above), but the accuracy hovered around the same value. Both models are saved in HDF5 files as well.
 
 
 
