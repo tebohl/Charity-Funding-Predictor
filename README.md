@@ -31,7 +31,7 @@ The results are saved to an HDF5 file in the Resources folder called AlphabetSou
 ### Step 4: Summary  
 The purpose of this analysis was to create a tool that can help select the applicants for funding with the best chance of success.  
 After reading the data, 'EIN' and 'NAME' columns were dropped since they do not contribute to the prediction of the target variable 'IS_SUCCESSFUL'. Unique values were binned together in the 'APPLICATION_TYPE' and 'CLASSIFICATION' columns since they contained many unique values. Categorical variables were then encoded.  
-The model was complied, trained and evaluated starting with two hidden layers, the first of which had twice as many nodes as features, the second with 15 nodes. Relu and sigmoid activation functions with 100 epochs were used to train the initial model. The accuracy was ~72.7%.  
+The model was compiled, trained and evaluated starting with two hidden layers, the first of which had twice as many nodes as features, the second with 15 nodes. Relu and sigmoid activation functions with 100 epochs were used to train the initial model. The accuracy was ~72.7%.  
 I made several attempts to optimize the model (details are in Step 3), but the accuracy hovered around the same value. Since this accuracy is not exceptional, perhaps we could try another model to solve this classification problem. Both models are saved in HDF5 files as well.
 
 
