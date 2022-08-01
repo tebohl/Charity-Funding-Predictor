@@ -21,10 +21,10 @@ The results are saved to an HDF5 file in the Resources folder called AlphabetSou
 With TensorFlow, I attempted to optimize the model to achieve a target predictive accuracy higher than 75% using the following methods:
 
 Data Adjustments:  
-- Dropped additoinal column 'ASK_AMT'.  (This did not help the accuracy, so I replaced it in my second attempt)
-- Created more bins for rare occurrences in column 'CLASSIFICATION'. (I tried several bin quantities, but yielded a similar accuracy for each)
-- Added one hidden layer. (I also tried different quantities of nodes, but the accuracy remained close to 72%)
-- Added 50 epochs to the training regimen.  
+- Dropped additoinal column 'ASK_AMT'  (This did not help the accuracy, so I replaced it in my second attempt)
+- Created more bins for rare occurrences in column 'CLASSIFICATION' (I tried several bin quantities, but yielded a similar accuracy for each)
+- Added one hidden layer (I also tried different quantities of nodes, but the accuracy remained close to 72%)
+- Added 50 epochs to the training regimen  
 
 
 ### Step 4: Summary  
