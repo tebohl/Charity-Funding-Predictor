@@ -12,12 +12,12 @@ Target variable: 'IS_SUCCESSFUL'
 
 Feature variables: 'APPLICATION_TYPE', 'AFFILIATION', 'CLASSIFICATION', 'USE_CASE', 'ORGANIZATION', 'STATUS', 'INCOME_AMT', 'SPECIAL_CONSIDERATIONS'
 
-### Step 2: Compile, Train, and Evaluate the Model  
+### Step 2: Compile, Train, and Evaluate the Model (Charity_Funding_NN.ipynb)  
 Using TensorFlow and Keras, I designed a neural network to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. First assigning the number of input features and nodes for each layer, then creating the first hidden layer with an appropriate activation function and finally and output layer with an appropriate activation function. Then the model is compiled and trained. Lastly, I evaluated the model using the test data to determine the loss and accuracy.  
 The results are saved to an HDF5 file in the Resources folder called AlphabetSoupCharity.h5.
 
 
-### Step 3: Optimize the Model (AlphabetSoupCharity_Optimzation.ipynb, AlphabetSoupCharity_Optimization.h5)  
+### Step 3: Optimize the Model (AlphabetSoupCharity_Optimzation.ipynb)  
 With TensorFlow, I attempted to optimize the model to achieve a target predictive accuracy higher than 75% using the following methods:
 
 Data Adjustments:  
@@ -26,6 +26,7 @@ Data Adjustments:
 - Added one hidden layer (I also tried different quantities of nodes, but the accuracy remained close to 72%)
 - Added 50 epochs to the training regimen  
 
+The results are saved to an HDF5 file in the Resources folder called AlphabetSoupCharity_Optimization.h5).
 
 ### Step 4: Summary  
 After reading the data, unecessary columns were dropped, unique values binned together and categorical variables were encoded. The target variable was 'IS_SUCCESSFUL'. The model was complied, trained and evaluated starting with two hidden layers, the first of which had twice as many nodes as features, the second with 15 nodes. Relu and sigmoid activation functions with 100 epochs were used to train the model. The accuracy was ~72.7%. Following the initial trial, I made several attempts to optimize the model (details are above), but the accuracy hovered around the same value. Both models are saved in HDF5 files as well.
